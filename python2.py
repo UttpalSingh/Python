@@ -1,4 +1,4 @@
-print("mutable and immurable")
+print("mutable and immutable")
 
 username = "Virat"
 print(username)
