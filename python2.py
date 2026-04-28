@@ -2,7 +2,7 @@ print("mutable and immutable")
 
 username = "Virat"
 print(username)
-username = "kohli "
+username = "kohli"
 print(username)
 
 # username is string and string is immutable.
