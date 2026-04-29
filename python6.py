@@ -29,5 +29,5 @@ print(L2) # [123, 456, 789]
 L2 = [123,456,789]
 L1[0] = 342
 print(L2) # [123, 456, 789]
-# Here value of L2 is not change bcz List is mutable and we give new value of L2 in line 29 that is similar to L1 but they are diffrent
-# So the new value of L2 is [123, 456, 789] 
+# Here value of L2 will remain [123,456,789] bcz List is mutable and we give new value of L2 in line 29 that is similar to L1 but they are diffrent
+# So the new value of L2 is [123, 456, 789] and L1 is [342,456,789]
