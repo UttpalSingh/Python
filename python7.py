@@ -15,5 +15,10 @@ import random
 # L1 = ["CaptainAmerica","IronMan","SpiderMan","Hulk","Thor"]
 # print(random.choice(L1)) # choose random value 
 
+mySets = {1,2,3,4}
+print(mySets & {1,3})  # intersection {1, 3}
+print(mySets | {1,3})  # Union {1, 2, 3, 4}
 
-
+setOne = mySets - {1,2,3,4}
+print(setOne)  # set()
+print(type(setOne)) # <class 'set'>
