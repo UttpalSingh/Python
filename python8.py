@@ -3,8 +3,8 @@ print("List in Python")
 # Notes:-
 # List is mutable (line10)
 # We can change any value using slicing if we pass it in the form of array.(line13)
-# .pop() and .remove() is used to remove item from the list.(line32)
-# .insert() is used to add value in the list.(line39)
+# .pop() and .remove() are used to remove item from the list.(line32)
+# .insert() and .append() are used to add value in the list.(line39)
 
 dish_variety = ["AlooParatha","ChickenCurry","EggCurry","MuttonHandi"]
 # print(dish_variety[0]) # AlooParatha
@@ -20,11 +20,11 @@ dish_variety = ["AlooParatha","ChickenCurry","EggCurry","MuttonHandi"]
 # dish_variety[1:2] = ["PannerTikka"] # here we pass the value in the form of array
 # print(dish_variety) # ['AlooParatha', 'PannerTikka', 'EggCurry', 'MuttonHandi']
 
-# # Loop in Python
+# # Loop on List
 # for dish in dish_variety:
 #     print(dish,end=" ") # AlooParatha ChickenCurry EggCurry MuttonHandi
 
-# # Condition in Python
+# # Condition on List
 # if "EggCurry" in dish_variety:
 #     print("item found")
 # else:
@@ -36,6 +36,9 @@ dish_variety = ["AlooParatha","ChickenCurry","EggCurry","MuttonHandi"]
 # dish_variety.remove("ChickenCurry") # remove item by value
 # print(dish_variety) # ['AlooParatha', 'EggCurry']
 
-# Insertion in Python
-dish_variety.insert(1,"MushroomMasala") # this method is used to insert value by using indexing
-print(dish_variety) # ['AlooParatha', 'MushroomMasala', 'ChickenCurry', 'EggCurry', 'MuttonHandi']
+# # Insertion in List
+# dish_variety.insert(1,"MushroomMasala") # this method is used to insert or add value by using indexing
+# print(dish_variety) # ['AlooParatha', 'MushroomMasala', 'ChickenCurry', 'EggCurry', 'MuttonHandi']
+# dish_variety.append("MushroomChilli") # this method is used to add value
+# print(dish_variety) # ['AlooParatha', 'MushroomMasala', 'ChickenCurry', 'EggCurry', 'MuttonHandi', 'MushroomChilli']
+
