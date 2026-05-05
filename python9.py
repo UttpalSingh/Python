@@ -3,7 +3,8 @@ print("Dictionary in Python")
 # Notes:-
 # Dictionary is mutable.(line16)
 # .get() is used to acess data by using key.(line18)
-# .pop() is used to delete data from the dict.(line22)
+# .pop() is used to delete data from the dict by using key name.(line22)
+# del is used to delete data from the memory.(line25)
 
 
 Player_Details = {
@@ -21,7 +22,8 @@ Player_Details = {
 # print(Player_Details.get("ID")) # 18
 # Player_Details.pop("CallSign") # this method is used to delete data from the dict by the key name
 # print(Player_Details) # {'name': 'Virat', 'ID': 18, 'Player': 'GOAT'}
-
+# del Player_Details["ID"] # it delete the reference from the memory
+# print(Player_Details) # {'name': 'Virat', 'CallSign': 'Chiku', 'Player': 'GOAT'}
 
 # # Loop on dictionary
 # for i in Player_Details:
