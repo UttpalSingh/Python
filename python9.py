@@ -37,4 +37,31 @@ Player_Details = {
 
 # # Add value in dictionay
 # Player_Details["Type"]  = "Batsman" 
-# print(Player_Details) # {'name': 'Virat', 'ID': 18, 'CallSign': 'Chiku', 'Player': 'GOAT', 'Type': 'Batsman'}
+# print(Player_Details ) # {'name': 'Virat', 'ID': 18, 'CallSign': 'Chiku', 'Player': 'GOAT', 'Type': 'Batsman'}
+
+# Dictionary inside Dictionary
+tea_shop = {
+    "chai" : {
+        "Masala" : "Spicey",
+        "Ginger" : "Zesty"
+    },
+    "Tea" : {
+        "Green" : "Mild",
+        "Black" : "Strong"
+    }
+}
+# print(tea_shop) # {'chai': {'Masala': 'spicey', 'Ginger': 'zesty'}, 'Tea': {'Green': 'Mild', 'Black': 'Strong'}}
+# print(tea_shop["chai"]) # {'Masala': 'spicey', 'Ginger': 'zesty'}
+# print(tea_shop["chai"]["Masala"]) # spicey
+
+Keys = ["masala","ginger","lemon"]
+default_value = "delicious"
+new_dict = dict.fromkeys(Keys,default_value)
+print(new_dict) # {'masala': 'delicious', 'ginger': 'delicious', 'lemon': 'delicious'}
+
+# Merge two dictionary
+d1 = {'x': 1, 'y': 2}
+d2 = {'k': 3, 'z': 4}
+
+d3 = d1 | d2
+print(d3) # {'x': 1, 'y': 2, 'k': 3, 'z': 4}
