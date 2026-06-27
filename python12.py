@@ -103,9 +103,9 @@ def printEven(num):
 
 #Problem10
 def printFactorial(num):
-    if num == 1 or num == 0:
+    if num == 1 or num == 0: #baseCase
         return 1
     else:
-        return num * printFactorial(num-1)
+        return num * printFactorial(num-1) #Logic
 
-print(printFactorial(5))
+print(printFactorial(99))
