@@ -3,10 +3,12 @@ import math
 #Problems in Function
 
 #Notes
-#lambda function(60)
-#Format String(51,52,92)
-#Add multiple value in function(64)[function with *args]
-#Print multiple parameter and argument inside a function(89)[function with **kwargs]
+#lambda function(62)
+#Format String(53,54,94)
+#Add multiple value in function(66)[function with *args]
+#Print multiple parameter and argument inside a function(91)[function with **kwargs]
+#Yield function(97)
+#Recursive function(104)
 
 
 #Problem1
@@ -74,7 +76,7 @@ list = []
 
 # for i in range(1,n+1):
     # num = int((input("Enter a number : ")))
-    # list += [num]
+    # list += [num] # list.append(num)
 # print("sum = ",sum_all(list)) # here I store the value list in function
 
 def sum_All(*args):
@@ -93,3 +95,17 @@ def printKwargs(**kwargs):
 # print(printKwargs(name = "virat",role = "Batsman",nickname = "Chiku"))
 
 #Problem9
+def printEven(num):
+    for i in range(2,num+1,2):
+        yield i
+# for n in printEven(10):
+#     print(n)
+
+#Problem10
+def printFactorial(num):
+    if num == 1 or num == 0:
+        return 1
+    else:
+        return num * printFactorial(num-1)
+
+print(printFactorial(5))
