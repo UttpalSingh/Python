@@ -1,1 +1,1 @@
-[{"name": "Java playlist", "time": "30min"}, {"name": "CPP playlist", "time": "1hr"}]
+[{"name": "Java playlist", "time": "30min"}, {"name": "CPP playlist", "time": "1hr"}, {"name": "c++", "time": "1hr"}]
