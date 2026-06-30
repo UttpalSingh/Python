@@ -1,5 +1,5 @@
 import time
-#Decorators in Python(@)
+
 
 #Problem1(Timing Function Execution)
 def timer(func):
@@ -32,4 +32,24 @@ def debug(func):
 def greet(name,greeting="Hello"):
     print(f"{greeting},{name}")
 
-greet("Modi Ji",greeting="Prime Minister of India") # calling : greet with args Modi Ji and kwargs greeting=Prime Minister of India
+# greet("Modi Ji",greeting="Prime Minister of India") # calling : greet with args Modi Ji and kwargs greeting=Prime Minister of India
+
+#Problem3(cache return value)
+def cache(func):
+    cache_value = {} #dictionary
+    def wrapper(*args,**kwargs):
+        keys = (args,tuple(sorted(kwargs.items())))
+        if keys in cache_value:
+            return cache_value[keys]
+        result = func(*args,**kwargs)
+        cache_value[keys]=result
+        return result
+    return wrapper
+
+@cache
+def long_running_function(a,b=4):
+    time.sleep(4)
+    return a+b
+
+print(long_running_function(2,3))
+print(long_running_function(4,3))
