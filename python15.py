@@ -15,8 +15,12 @@ def save_data(videos):
 
 
 def list_all_videos(videos):
+    ('\n')
+    print("*" * 40)
     for index,video in enumerate(videos,start=1):
-        print(f"{index}. ")
+        print(f"{index}. {video['name']},Duration: {video['time']}")
+    print('\n')
+    print("*" * 40)
 
 def add_video(videos):
     name = input("Enter video name: ")
@@ -25,10 +29,25 @@ def add_video(videos):
     save_data(videos)
 
 def update_video(videos):
-    pass
+    list_all_videos(videos)
+    index = int(input("Enter the number of video you want to update : "))
+    if 1 <= index <= len(videos):
+        name = input("Enter the new video name : ")
+        time = input("Enter the new video time : ")
+        videos[index-1] = {'name':name,'time':time}
+        save_data(videos)
+    else:
+        print("Invalid Index")
 
 def delete_video(videos):
-    pass
+    list_all_videos(videos)
+    index = int(input("Enter the number of video you want to delete : "))
+
+    if 1 <= index <= len(videos):
+        del videos[index-1]
+        save_data(videos)
+    else:
+        print("Invalid Index")
 
 def main():
     videos = load_data()
@@ -41,7 +60,6 @@ def main():
         print("4. Delete a youtube video")
         print("5. Exit the app")
         choice = input("Enter your choice : ")
-        print(videos)
 
         match choice:
             case '1':
