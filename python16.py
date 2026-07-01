@@ -21,7 +21,7 @@ def add_video(name,time):
     conn.commit()
 
 def update_video(video_id,new_name,new_time):
-    cursor.execute("UPDATE videos SET name = ? ,time = ? WHERE id = ?", (new_name,new_time,video_id))
+    cursor.execute("UPDATE videos SET name = ?, time = ? WHERE id = ?", (new_name, new_time, video_id))
     conn.commit()
  
 def delete_video(video_id):
@@ -52,10 +52,10 @@ def main():
             video_id = input("Enter video id to update : ")
             name = input("Enter the video name : ")
             time  = input("Enter the video time : ")
-            update_video(video_id,time)
+            update_video(video_id,name,time)
         elif choice == '4':
             video_id = input("Enter video id to delete : ")
-            delete_video(video_id,time)
+            delete_video(video_id)
         elif choice == '5':
             break
         else:
