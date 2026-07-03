@@ -1,2 +1,2 @@
 # Python
-make project by your own
+note = make project by your own
